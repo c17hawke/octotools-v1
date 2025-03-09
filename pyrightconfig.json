@@ -1,0 +1,6 @@
+{
+  "include": [
+    "src"
+  ],
+  "python.analysis.typeCheckingMode": "strict"
+}
