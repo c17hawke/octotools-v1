@@ -1,10 +1,15 @@
 [tool.poetry]
 name = "octotools"
-version = "1.1.0"
+version = "1.1.1"
 description = "An effective and easy-to-use agentic framework with extendable tools for complex reasoning."
 authors = ["'' ''"]
 license = "MIT"
 readme = "README.md"
+homepage = "https://octotools.github.io"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent"
+]
 
 [tool.poetry.dependencies]
 python = "^3.10"
