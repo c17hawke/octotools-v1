@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "octotools"
-version = "1.1.2"
+version = "1.0.0"
 description = "An effective and easy-to-use agentic framework with extendable tools for complex reasoning."
 authors = ["'' ''"]
 license = "MIT"
