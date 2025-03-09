@@ -19,7 +19,7 @@ from typing import List, Union
 from .base import EngineLM, CachedEngine
 
 import openai
-
+from langsmith.wrappers import wrap_openai
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -61,9 +61,9 @@ class ChatOpenAI(EngineLM, CachedEngine):
         if os.getenv("OPENAI_API_KEY") is None:
             raise ValueError("Please set the OPENAI_API_KEY environment variable if you'd like to use OpenAI models.")
         
-        self.client = OpenAI(
+        self.client = wrap_openai(OpenAI(
             api_key=os.getenv("OPENAI_API_KEY"),
-        )
+        ))
         self.model_string = model_string
         self.is_multimodal = is_multimodal
         self.enable_cache = enable_cache
