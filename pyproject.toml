@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "octotools"
-version = "1.0.0"
+version = "1.0.1"
 description = "An effective and easy-to-use agentic framework with extendable tools for complex reasoning."
 authors = ["'' ''"]
 license = "MIT"
@@ -26,6 +26,7 @@ transformers = "4.44.2"
 pymed = "0.8.9"
 metapub = "0.5.12"
 langsmith = "^0.3.13"
+groq = "^0.18.0"
 
 
 [build-system]

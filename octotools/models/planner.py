@@ -3,15 +3,15 @@ import re
 from PIL import Image
 from typing import Dict, Any, List, Tuple
 
-from octotools.engine.openai import ChatOpenAI
+from octotools.engine.groq import ChatGroq
 from octotools.models.memory import Memory
 from octotools.models.formatters import QueryAnalysis, NextStep, MemoryVerification
 
 class Planner:
     def __init__(self, llm_engine_name: str, toolbox_metadata: dict = None, available_tools: List = None):
         self.llm_engine_name = llm_engine_name
-        self.llm_engine_mm = ChatOpenAI(model_string=llm_engine_name, is_multimodal=True)
-        self.llm_engine = ChatOpenAI(model_string=llm_engine_name, is_multimodal=False)
+        self.llm_engine_mm = ChatGroq(model_string=llm_engine_name, is_multimodal=True)
+        self.llm_engine = ChatGroq(model_string=llm_engine_name, is_multimodal=False)
         self.toolbox_metadata = toolbox_metadata if toolbox_metadata is not None else {}
         self.available_tools = available_tools if available_tools is not None else []
 

@@ -8,7 +8,7 @@ import contextlib
 
 
 from octotools.tools.base import BaseTool
-from octotools.engine.openai import ChatOpenAI
+from octotools.engine.groq import ChatGroq
 
 import signal
 from contextlib import contextmanager
@@ -83,7 +83,7 @@ class Python_Code_Generator_Tool(BaseTool):
             }
         )
         print(f"\nInitializing Python_Code_Generator_Tool with model_string: {model_string}")
-        self.llm_engine = ChatOpenAI(model_string=model_string, is_multimodal=False) if model_string else None
+        self.llm_engine = ChatGroq(model_string=model_string, is_multimodal=False) if model_string else None
 
     @staticmethod
     def preprocess_code(code):
